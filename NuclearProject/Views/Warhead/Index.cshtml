@@ -1,0 +1,26 @@
+﻿@model List<NuclearProject.Models.WarheadType>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Warhead Index</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Adı</th>      
+        <th>İşlemler</th>  
+    </tr>
+    @foreach (NuclearProject.Models.WarheadType wt in Model) { 
+        <tr>
+            <td>
+                @wt.WarheadTypeId
+            </td>
+            <td>
+                @wt.WarheadTypeName
+            </td>
+            <td>
+                <a href="/Warhead/View/@wt.WarheadTypeId">View</a>
+            </td>
+        </tr>
+    }
+</table>
