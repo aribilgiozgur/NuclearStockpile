@@ -27,3 +27,33 @@ C:\Users\aribilgi\documents\visual studio 2012\Projects\NuclearProject\NuclearPr
 C:\Users\aribilgi\documents\visual studio 2012\Projects\NuclearProject\NuclearProject\bin\System.Web.WebPages.Razor.xml
 C:\Users\aribilgi\documents\visual studio 2012\Projects\NuclearProject\NuclearProject\obj\Debug\NuclearProject.dll
 C:\Users\aribilgi\documents\visual studio 2012\Projects\NuclearProject\NuclearProject\obj\Debug\NuclearProject.pdb
+C:\Project\NuclearStockpile\NuclearProject\bin\NuclearProject.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\NuclearProject.pdb
+C:\Project\NuclearStockpile\NuclearProject\bin\Antlr3.Runtime.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\EntityFramework.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\Newtonsoft.Json.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Net.Http.Formatting.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Http.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Http.WebHost.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Mvc.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Optimization.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Providers.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Razor.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.Deployment.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.Razor.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\WebGrease.dll
+C:\Project\NuclearStockpile\NuclearProject\bin\EntityFramework.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\Newtonsoft.Json.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Net.Http.Formatting.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Http.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Http.WebHost.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Mvc.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.Razor.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.Deployment.xml
+C:\Project\NuclearStockpile\NuclearProject\bin\System.Web.WebPages.Razor.xml
+C:\Project\NuclearStockpile\NuclearProject\obj\Debug\NuclearProject.csprojResolveAssemblyReference.cache
+C:\Project\NuclearStockpile\NuclearProject\obj\Debug\NuclearProject.dll
+C:\Project\NuclearStockpile\NuclearProject\obj\Debug\NuclearProject.pdb

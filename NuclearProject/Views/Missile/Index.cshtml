@@ -1,0 +1,21 @@
+﻿@model List<NuclearProject.Models.Missile>
+<h2>^_^ Füze Queyfiiiiiii!!! ^_^</h2>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Adı</th>
+        <th>Menzili</th>
+        <th>İşlemler</th>
+    </tr>
+    
+    @foreach (NuclearProject.Models.Missile m in Model) { 
+        <tr>
+            <td>@m.MissileId</td>
+            <td>@m.MissileName</td>
+            <td>@m.MissileRange KM</td>
+            <td><a href="/Missile/View/@m.MissileId">Detay</a></td>
+        </tr>
+    }
+</table>
+<a href="/Missile/Insert">Füze Eqle</a>
+
