@@ -1,0 +1,24 @@
+﻿@model NuclearProject.Models.Missile
+<h2>Edit</h2>
+<form action="#" method="post">
+    <h3>Başlık Tipi</h3>    
+    <select name="WarheadTypeId">
+        @foreach (NuclearProject.Models.WarheadType wt in ViewBag.Warheads)
+        {
+            if (Model.WarheadTypeId == wt.WarheadTypeId)
+            {
+                <option value="@wt.WarheadTypeId" selected="selected">@wt.WarheadTypeName</option>
+            }else{
+                <option value="@wt.WarheadTypeId">@wt.WarheadTypeName</option>
+            }
+        }
+    </select>
+    <h3>Füze Adı</h3>
+    <input type="text" name="MissileName" value="@Model.MissileName" />
+    <h3>Menzili</h3>
+    <input type="text" name="MissileRange" value="@Model.MissileRange"/>
+    <h3>YakıtTipi</h3>
+    <input type="text" name="FuelType" value="@Model.FuelType"/>
+    <br />
+    <input type="submit" value="Gönder" />
+</form>

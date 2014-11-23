@@ -14,11 +14,41 @@ namespace NuclearProject.Models
         public double MissileRange { get; set; }
         public String FuelType { get; set; }
 
+        // Sadece view için kullanılmakta
+        public String WarheadTypeText { get; set; }
+
         public SqlConnection cnn = new SqlConnection("Server=.;Database=NuclearDB; Trusted_Connection=true;");
 
 
-        public Missile()
+        public Missile(List<String> parameterArray)
         {
+            this.WarheadTypeId = int.Parse(parameterArray[0]);
+            this.MissileName= parameterArray[1];
+            this.MissileRange = double.Parse(parameterArray[2]);
+            this.FuelType = parameterArray[3];
+
+        }
+
+        public Missile(int Id)
+        {
+            String sql = "select * from Missiles where MissileId = @MissileId";
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@MissileId", Id);
+
+            cnn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                this.MissileId = Id;
+                this.WarheadTypeId = int.Parse(reader["WarheadTypeId"].ToString());
+                this.MissileName = reader["MissileName"].ToString();
+                this.MissileRange = double.Parse(reader["MissileRange"].ToString());
+                this.FuelType = reader["FuelType"].ToString();
+                WarheadType w = new WarheadType(this.WarheadTypeId);
+                this.WarheadTypeText = w.WarheadTypeName;
+                
+            }
+            cnn.Close();
 
         }
         
@@ -40,27 +70,12 @@ namespace NuclearProject.Models
             cnn.Close();
         }
 
-        public Missile GetMissile(int Id) {
-
-            Missile m = new Missile();
-            
-            String sql = "select * from Missiles where MissileId = @MissileId";
-            SqlCommand cmd = new SqlCommand(sql, cnn);
-            cmd.Parameters.AddWithValue("@MissileId", Id);
-
-            cnn.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read()) {
-                m.WarheadTypeId = int.Parse(reader["WarheadTypeId"].ToString());
-                m.MissileName = reader["MissileName"].ToString();
-                m.MissileRange = double.Parse(reader["MissileRange"].ToString());
-                m.FuelType = reader["FuelType"].ToString();
-            }
-            cnn.Close();
-            return m;
-        }
-        public List<Missile> GetMissiles()
+     
+        public static List<Missile> GetMissiles()
         {
+            SqlConnection cnn = new SqlConnection("Server=.;Database=NuclearDB; Trusted_Connection=true;");             
+
+
             List<Missile> missiles = new List<Missile>();
 
             String sql = "select * from Missiles";
@@ -69,16 +84,36 @@ namespace NuclearProject.Models
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                Missile m = new Missile();
-                m.WarheadTypeId = int.Parse(reader["WarheadTypeId"].ToString());
-                m.MissileName = reader["MissileName"].ToString();
-                m.MissileRange = double.Parse(reader["MissileRange"].ToString());
-                m.FuelType = reader["FuelType"].ToString();
+                /*int missileId = int.Parse(reader["MissileId"].ToString());
+                Missile m = new Missile(missileId);*/
+                Missile m = new Missile(reader.GetInt32(0));
                 missiles.Add(m);
             }
             cnn.Close();
             return missiles;
         }
 
+        public void Save() {
+            String sql = "update Missiles set"
+                +" WarheadTypeId=@WarheadTypeId,"
+                +" MissileName=@MissileName,"
+                +" MissileRange=@MissileRange,"
+                +" FuelType=@FuelType"
+                +" where MissileId = @MissileId";
+
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@WarheadTypeId", this.WarheadTypeId);
+            cmd.Parameters.AddWithValue("@MissileName", this.MissileName);
+            cmd.Parameters.AddWithValue("@MissileRange", this.MissileRange);
+            cmd.Parameters.AddWithValue("@FuelType", this.FuelType);
+            cmd.Parameters.AddWithValue("@MissileId", this.MissileId);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+      
+
+    
     }
 }

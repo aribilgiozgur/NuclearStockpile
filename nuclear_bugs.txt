@@ -1,0 +1,1 @@
+BUG: Füzeler listesinde Id kýsmý 0 geliyor

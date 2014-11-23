@@ -221,6 +221,8 @@
     <Content Include="Views\Warhead\Edit.cshtml" />
     <Content Include="Views\Missile\Index.cshtml" />
     <Content Include="Views\Missile\Insert.cshtml" />
+    <Content Include="Views\Missile\View.cshtml" />
+    <Content Include="Views\Missile\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

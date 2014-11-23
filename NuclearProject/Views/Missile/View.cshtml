@@ -1,0 +1,9 @@
+﻿@model NuclearProject.Models.Missile
+
+<h2>@Model.MissileName</h2>
+Başlık Tipi: @Model.WarheadTypeText<br />
+Füze Adı: @Model.MissileName<br />
+Menzili: @Model.MissileRange KM<br />
+Yakıt Tipi: @Model.FuelType<br />
+
+<a href="/Missile/Edit/@Model.MissileId">Güncelle</a> <a href="/Missile/Index">Geri Dön</a>
