@@ -68,5 +68,23 @@ namespace NuclearProject.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete(int id) {
+            Session["deleteId"] = id;
+            Missile m = new Missile(id);
+            return View(m);
+        }
+
+        [HttpPost]
+        public ActionResult Delete() {
+            int id = int.Parse(Session["deleteId"].ToString());
+
+            // Silme işlemi
+            Missile m = new Missile(id);
+            m.Delete();
+            return RedirectToAction("Index");
+
+        }
+
+
     }
 }

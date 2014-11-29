@@ -223,6 +223,7 @@
     <Content Include="Views\Missile\Insert.cshtml" />
     <Content Include="Views\Missile\View.cshtml" />
     <Content Include="Views\Missile\Edit.cshtml" />
+    <Content Include="Views\Missile\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

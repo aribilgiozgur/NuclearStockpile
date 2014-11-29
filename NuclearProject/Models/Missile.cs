@@ -112,6 +112,18 @@ namespace NuclearProject.Models
             cmd.ExecuteNonQuery();
             cnn.Close();
         }
+
+        public void Delete() {
+            String sql = "delete from Missiles where MissileId = @MissileId";
+
+            SqlCommand cmd = new SqlCommand(sql, cnn);
+            cmd.Parameters.AddWithValue("@MissileId", this.MissileId);
+
+            cnn.Open();
+            cmd.ExecuteNonQuery();
+            cnn.Close();
+
+        }
       
 
     
