@@ -1,8 +1,9 @@
 ﻿@model NuclearProject.Models.Missile
 <h2>Edit</h2>
+
 <form action="#" method="post">
     <h3>Başlık Tipi</h3>    
-    <select name="WarheadTypeId">
+    <select name="WarheadTypeId" class="form-control">
         @foreach (NuclearProject.Models.WarheadType wt in ViewBag.Warheads)
         {
             if (Model.WarheadTypeId == wt.WarheadTypeId)
@@ -14,11 +15,11 @@
         }
     </select>
     <h3>Füze Adı</h3>
-    <input type="text" name="MissileName" value="@Model.MissileName" />
+    <input type="text" name="MissileName" value="@Model.MissileName" class="form-control" />
     <h3>Menzili</h3>
-    <input type="text" name="MissileRange" value="@Model.MissileRange"/>
+    <input type="number" name="MissileRange" value="@Model.MissileRange" class="form-control"/>
     <h3>YakıtTipi</h3>
-    <input type="text" name="FuelType" value="@Model.FuelType"/>
+    <input type="text" name="FuelType" value="@Model.FuelType" class="form-control"/>
     <br />
-    <input type="submit" value="Gönder" />
+    <input type="submit" value="Gönder" class="btn btn-danger pull-right"/>
 </form>

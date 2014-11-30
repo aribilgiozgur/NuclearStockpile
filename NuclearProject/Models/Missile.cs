@@ -22,10 +22,16 @@ namespace NuclearProject.Models
 
         public Missile(List<String> parameterArray)
         {
-            this.WarheadTypeId = int.Parse(parameterArray[0]);
-            this.MissileName= parameterArray[1];
-            this.MissileRange = double.Parse(parameterArray[2]);
-            this.FuelType = parameterArray[3];
+            try
+            {
+                this.WarheadTypeId = int.Parse(parameterArray[0]);
+                this.MissileName = parameterArray[1];
+                this.MissileRange = double.Parse(parameterArray[2]);
+                this.FuelType = parameterArray[3];
+            }
+            catch (Exception ex) {
+                //throw new Exception();
+            }
 
         }
 

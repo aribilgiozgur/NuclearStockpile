@@ -2,18 +2,19 @@
 <h2>Add</h2>
 <form action="#" method="post">
     <h3>Başlık Tipi</h3>
-    <select name="WarheadTypeId">
+    <a href="/Warhead/Insert"><i class="glyphicon glyphicon-plus"></i></a>
+    <select name="WarheadTypeId" class="form-control">
         @foreach (NuclearProject.Models.WarheadType wt in Model) { 
             <option value="@wt.WarheadTypeId">@wt.WarheadTypeName</option>
         }
     </select>
+    
     <h3>Füze Adı</h3>
-    <input type="text" name="MissileName" />
+    <input type="text" name="MissileName"  class="form-control"/>
     <h3>Menzili</h3>
-    <input type="text" name="MissileRange" />
+    <input type="number" name="MissileRange" class="form-control"/>
     <h3>YakıtTipi</h3>
-    <input type="text" name="FuelType" />
+    <input type="text" name="FuelType"  class="form-control" />
     <br />
-    <input type="submit" value="Gönder" />
+    <input type="submit" value="Gönder" class="btn btn-success pull-right" />    
 </form>
-<a href="/Warhead/Insert">Başlık Ekle</a>

@@ -68,14 +68,14 @@ namespace NuclearProject.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost]
-        public ActionResult Delete(FormCollection col) {                        
-            int  id = int.Parse(col.Get("id"));            
-            Missile m = new Missile(id);
-            m.Delete();
-            return RedirectToAction("Index");
+            [HttpPost]
+            public ActionResult Delete(FormCollection col) {                        
+                int  id = int.Parse(col.Get("id"));            
+                Missile m = new Missile(id);
+                m.Delete();
+                return RedirectToAction("Index");
 
-        }
+            }
 
 
     }

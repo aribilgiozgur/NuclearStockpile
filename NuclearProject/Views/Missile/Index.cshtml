@@ -1,7 +1,7 @@
 ﻿@model List<NuclearProject.Models.Missile>
 <h2>Füzeler</h2>
-<table>
-    <tr>
+<table class="table table-striped">
+    <tr class="warning">
         <th>Id</th>
         <th>Adı</th>
         <th>Menzili</th>
@@ -13,10 +13,10 @@
             <td>@m.MissileId</td>
             <td>@m.MissileName</td>
             <td>@m.MissileRange KM</td>
-            <td><a href="/Missile/View/@m.MissileId">Detay</a></td>
+            <td><a href="/Missile/View/@m.MissileId"><i class="glyphicon glyphicon-wrench"></i></a></td>
         </tr>
     }
 </table>
-<a href="/Missile/Insert">Füze Ekle</a>
+<a href="/Missile/Insert" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i></a>
 
 
